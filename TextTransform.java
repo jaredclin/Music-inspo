@@ -10,8 +10,16 @@ public class TextTransform {
     charValuesToDeltaValues(notes);
     deltaValuesToNumeric(notes, startnote);
     numericToNotes(notes, keyNotes);
+    displayKey(keyNotes);
     Note.print(notes);
     return;
+  }
+
+  private static void displayKey(String[] keyNotes) {
+    System.out.println("\n\nAvailable notes:");
+    for (int i = 0; i < 7; i++ ) {
+      System.out.print(keyNotes[i] + " ");
+    }
   }
 
   private static void textToCharValues(Note[] notes, String text) {
