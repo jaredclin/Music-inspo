@@ -10,7 +10,7 @@ public class TextTransform {
     charValuesToDeltaValues(notes);
     deltaValuesToNumeric(notes, startnote);
     numericToNotes(notes, keyNotes);
-    print(notes);
+    Note.print(notes);
     return;
   }
 
@@ -53,12 +53,5 @@ public class TextTransform {
       notes[i].octave = octave;
     }
     return;
-  }
-
-  private static void print(Note[] notes) {
-    System.out.println("\n\n");
-    for (int i = 0; i < notes.length; i++) {
-      System.out.print(notes[i].note + "(" + notes[i].octave + ")  ");
-    }
   }
 }
