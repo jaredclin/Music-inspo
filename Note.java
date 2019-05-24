@@ -14,27 +14,21 @@ public class Note {
 
   public static void print(Note[] notes) {
     SHEET_MAP = new HashMap<Integer, String[]>();
-    String[] line_2 = new String[notes.length + 1];
     String[] line_1 = new String[notes.length + 1];
     String[] line0 = new String[notes.length + 1];
     String[] line1 = new String[notes.length + 1];
-    String[] line2 = new String[notes.length + 1];
-    line_2[0] = "-2|";
     line_1[0] = "-1|";
     line0[0] = "0|";
     line1[0] = "1|";
-    line2[0] = "2|";
-    SHEET_MAP.put(-2, line_2);
     SHEET_MAP.put(-1, line_1);
     SHEET_MAP.put(0, line0);
     SHEET_MAP.put(1, line1);
-    SHEET_MAP.put(2, line2);
 
     System.out.println("\n\n");
     int lowerbound = -1;
     int upperbound = 1;
 
-    for (int i = -2; i < 3; i++) {
+    for (int i = -1; i < 2; i++) {
       String[] sheet = SHEET_MAP.get(i);
       for (int j = 1; j< sheet.length; j++) {
         sheet[j] = "   ";
